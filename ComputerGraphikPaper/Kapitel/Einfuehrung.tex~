@@ -1,0 +1,80 @@
+\pagenumbering{arabic}
+\chapter{Einf"uhrung}
+\label{cha:einfuehrung}
+
+\section{Einf"uhrung in das Thema} 
+Computernetzwerke sind inzwischen fester Bestandteil der Gesellschaft und finden "uberall Verwendung. %
+Wenn fr"uher Netzwerke nur im Milit"ar, in Universit"aten und Firmen benutzt wurden, haben nun auch %
+normale Endverbraucher Zugriff auf Netzwerke. Jedoch ist auch das Internet nur ein Netzwerk aus Netzwerken, das über den gesamten Globus verteilt ist. %
+Geht man in die unterste Ebene, kommt man irgendwann in einem sogenannten Local Area Network (LAN) an. Inzwischen sind diese in fast jedem %
+Haushalt zu finden, da sie es erm"oglichen mehrere Computer "uber einen Router mit dem Internet %
+zu verbinden. LANs erm"oglichen einen Datenaustausch zwischen den im Netzwerk verbundenen Computern. % 
+Ein sehr beliebter Verwendungszweck sind die sogenannten LAN-Partys, bei denen "uber %
+ein LAN Videospiele miteinander gespielt werden k"onnen. %
+Dabei ist es m"oglich lokale verteilte Systeme aufzubauen, die gemeinsam eine Aufgabe %
+bearbeiten. Das Berkeley Open Infrastructure for Network Computing stellt eine Anwendung %
+f"ur verteilte Systeme dar \autocite{uni:boinc}. Mit dieser ist es m"oglich "uber das %
+Internet an verschiedenen Forschungsprojekten teilzunehmen, indem man eigene %
+Rechenzeit zur Verf"ugung stellt. Eine weitere Anwendung f"ur verteilte Systeme stellt %
+das Zabbix Framework dar, welches auch in dieser Bachelor Arbeit n"aher betrachtet wird. %
+Zabbix ist ein Netzwerk Monitoring Tool, mit dem es m"oglich ist St"orungen in einem  Netzwerk %
+zu erkennen und die Leistung von den im Netzwerk angeschlossenen Computern zu betrachten. % 
+
+%Motiviation und Zielsetzung zusammenfügen. 
+\section{Motivation und Zielsetzung}
+In einem Netzwerk, in dem konstant Daten ausgetauscht werden, wirkt sich die Gr"o"se der %
+versandten Pakete auf die Leistung der Endger"ate aus. Um eine gleichm"a"sige Auslastung des Netzwerkes %
+und die Leistungsf"ahigkeit der im Netzwerk angeschlossenen Computer zu gew"ahrleisten, %
+kann man dies mittels der Gr"o"se der Pakete steuern. Deshalb ist das Bestimmen einer Paketgr"o"se %
+f"ur ein gegebenes System wichtig, um eine gleichm"a"sige Lastenverteilung im Netzwerk zu haben %
+und die Endger"ate nicht zum Abst"urzen zu bringen. % 
+Das Ziel dieser Bachelorarbeit ist es herauszufinden, ob "uber die Paketgr"o"se eine %
+Optimierung der Performanz der Endger"ate und der Daten"ubertragung im Netzwerk m"oglich %
+ist. Dabei wird versucht die gr"o"stm"ogliche Menge an Daten im Netzwerk auszutauschen %
+ohne die Funktionalit"at eines der Hosts zu gef"ahrden. % 
+
+
+\section{Methoden zum Erreichen des Ziels}
+
+Zabbix, welches von der Zabbix SIA vertrieben wird, ist wie Nagios eine Open Source % Nagios drinalssen?
+Netzwerkmonitoring Software, die es erm"oglicht Ger"ate in einem Netzwerk zu "uberwachen. %
+Daf"ur wurde ein Local Area Network bestehend aus vier Raspberry Pis aufgebaut. Das Netzwerk wurde %
+in einer Sterntopologie aufgebaut, welche standardm"a"sig verwendet wird. Der Vorteil bei dieser Topologie ist, dass %
+der Ausfall von einem Computer keine Auswirkung auf den Rest des Netzwerks hat, sie leicht erweiterbar ist und %
+hohe "Ubertragungsraten bietet, wenn der Netzknoten ein Switch ist \autocite{book:CN2003}. % 
+Daf"ur wird das auf dem TCP/IP-Protokollstapel basierende Secure Copy Programm verwendet. %
+Es stellt eine Erweiterung der Unix Secure Shell dar und erm"oglicht einen fehlerfreien %
+Austausch von Dateien. Beide Programme, Secure Copy und Secure Shell sind, inzwischen fester Bestandteil %
+fast aller Linux Distributionen, so auch dem Debian Port Raspbian, welcher auf den %
+Raspberry Pis installiert ist. Mit diesen Tools wurde im Rahmen dieser Bachelorarbeit ein eigenes Testframework aufgebaut, %
+welches automatisiert Dateien von den Computern verschickt und Informationen "uber die Dateien, %
+\begin{figure}[htbp]
+\centering
+\includegraphics*[scale=0.5]{Abb/ISOOSI}
+
+\caption{ISO/OSI Referenzmodell.}
+Das Framework befindet sich im ISO/OSI Referenzmodell auf der Anwendungsschicht.
+\label{fig:ISOOSI}
+\end{figure}
+
+
+Empf"anger und "Ubermittlungszeiten speichert. Diese Logfiles werden %
+mittels Textverarbeitung analysiert und in Tabellen dargestellt. Zabbix kann %
+Statistiken zu den Computern im Netz erstellen. So ist es m"oglich mittels Zabbix die %
+CPU-Last, die Festplattenauslastung und die Last auf den Ethernet Ports der Raspberry Pis %
+zu beobachten. Dieses Framework wird in \cref{cha:framework} nochmal genauer vorgestellt. %
+Au"serdem werden in dieser Arbeit % Marie oder vllt. weglassen?!
+drei verschiedene Testf"alle betrachtet, kleine Dateien 20 Megabyte, %
+mittlere Dateien 200 Megabyte und Gro"se Dateien mit 2000 Megabyte. %
+
+
+Zum Schluss werden die zuvor gesammelten Ergebnisse in \cref{cha:ergebnisse} verglichen und die %
+Annahme "uberpr"uft, ob es m"oglich ist eine optimale gr"o"se f"ur Pakete in einem Netzwerk %
+zu bestimmen. %
+
+
+
+
+
+
+
